@@ -1,11 +1,24 @@
-# WordPress
+# WordPress uploads
 wp-content/uploads/
+
+# Default WordPress themes
+theme/twentytwentythree/
+theme/twentytwentyfour/
+theme/twentytwentyfive/
+
+themes/twentytwentythree/
+themes/twentytwentyfour/
+themes/twentytwentyfive/
 
 # Node
 node_modules/
 
-# Vite
+# Vite build
 dist/
+
+# Environment
+.env
+.env.*
 
 # OS
 .DS_Store
@@ -13,5 +26,5 @@ dist/
 # IDE
 .vscode/
 
-# logs
+# Logs
 *.log
