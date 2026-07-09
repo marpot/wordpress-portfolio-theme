@@ -1,0 +1,42 @@
+@use "./utils/variables" as *;
+@use "./utils/breakpoints" as *;
+@use "./utils/typography" as *;
+
+@use "./base/reset";
+
+@use "./layout/container";
+@use "./layout/grid";
+@use "./layout/responsive";
+@use "./layout/scroll-snap";
+@use "./layout/sections";
+@use "./layout/background";
+@use "./layout/header";
+
+@use "./components/buttons";
+@use "./components/cards";
+@use "./components/navigation";
+
+@use "./sections/hero";
+
+body {
+  font-family: system-ui, sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(0,255,204,0.08),
+      transparent 35%
+    ),
+    #050505;
+
+  color: #fff;
+
+  line-height: 1.5;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; 
+}

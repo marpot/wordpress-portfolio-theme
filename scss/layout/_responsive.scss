@@ -1,0 +1,11 @@
+@use "../utils/breakpoints" as bp;
+
+@include bp.mobile {
+  h1 {
+    font-size: 32px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

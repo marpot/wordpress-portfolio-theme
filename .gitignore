@@ -1,0 +1,17 @@
+# WordPress
+wp-content/uploads/
+
+# Node
+node_modules/
+
+# Vite
+dist/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+
+# logs
+*.log

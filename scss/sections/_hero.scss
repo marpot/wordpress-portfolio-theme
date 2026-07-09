@@ -1,0 +1,158 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(0, 255, 204, 0.12),
+      transparent 40%
+    ),
+    #050505;
+
+
+  &__background {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+      linear-gradient(
+        rgba(0, 255, 204, 0.08) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 255, 204, 0.08) 1px,
+        transparent 1px
+      );
+
+    background-size:
+      60px 60px;
+
+
+    animation: gridMove 20s linear infinite;
+
+    opacity: 0.25;
+  }
+
+
+  &__content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+  }
+
+
+  &__tag {
+    color: #00ffcc;
+
+    font-family: monospace;
+
+    letter-spacing: 0.25em;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 24px;
+  }
+
+
+  &__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+      0 0 20px rgba(0,255,204,.25);
+  }
+
+
+  &__subtitle {
+    color: rgba(255,255,255,.75);
+
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+
+    margin-bottom: 32px;
+  }
+
+
+  &__description {
+    max-width: 650px;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 1.1rem;
+  }
+
+
+  &__status {
+    margin-top: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(0,255,204,.25);
+
+    background: rgba(0,0,0,.35);
+
+    font-family: monospace;
+
+    color: rgba(255,255,255,.8);
+
+    backdrop-filter: blur(10px);
+  }
+
+
+  &__status-dot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #00ffcc;
+
+    box-shadow:
+      0 0 15px #00ffcc;
+
+    animation: pulse 2s infinite;
+  }
+}
+
+
+
+@keyframes gridMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(60px);
+  }
+
+}
+
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+}

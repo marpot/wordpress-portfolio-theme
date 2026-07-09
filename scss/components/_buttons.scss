@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: black;
+}
+

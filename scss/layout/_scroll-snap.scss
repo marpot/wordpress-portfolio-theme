@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.panel {
+  min-height: 100vh;
+
+  scroll-snap-align: start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
