@@ -1,10 +1,29 @@
 <section class="about panel" id="about">
-    <div class="container">
-        <h2>O mnie</h2>
 
-        <p>
-            Tworzę strony WordPress i uczę się nowoczesnego frontendu.
-            Skupiam się na czystym kodzie, SCSS i automatyzacji dev workflow.
-        </p>
+    <div class="container">
+
+
+        <div class="about__content">
+
+
+            <span class="about__label">
+                About me
+            </span>
+
+
+            <h2 class="about__title">
+                <?php echo esc_html(get_field('about_title')); ?>
+            </h2>
+
+
+            <p class="about__description">
+                <?php echo esc_html(get_field('about_description')); ?>
+            </p>
+
+
+        </div>
+
+
     </div>
+
 </section>
