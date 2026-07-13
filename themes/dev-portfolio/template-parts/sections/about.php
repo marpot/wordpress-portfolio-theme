@@ -6,9 +6,7 @@
         <div class="about__content">
 
 
-            <span class="about__label">
-                About me
-            </span>
+            
 
 
             <h2 class="about__title">

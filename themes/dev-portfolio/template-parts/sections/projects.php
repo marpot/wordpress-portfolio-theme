@@ -1,7 +1,9 @@
 <section class="projects panel" id="projects">
     <div class="container">
 
-        <h2>Projekty</h2>
+        <h2>
+            <?php echo pll__('Projekty'); ?>
+        </h2>
 
         <div class="projects__grid">
 

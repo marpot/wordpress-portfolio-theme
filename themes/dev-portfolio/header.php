@@ -21,21 +21,27 @@
     <nav class="hero-nav">
 
 
-      <?php
+      <div class="hero-nav__menu">
 
-      wp_nav_menu([
 
-        'theme_location' => 'primary',
+        <?php
 
-        'container' => false,
+        wp_nav_menu([
 
-        'menu_class' => '',
+          'theme_location' => 'primary',
 
-        'fallback_cb' => false,
+          'container' => false,
 
-      ]);
+          'menu_class' => 'hero-nav__list',
 
-      ?>
+          'fallback_cb' => false,
+
+        ]);
+
+        ?>
+
+
+      </div>
 
 
 

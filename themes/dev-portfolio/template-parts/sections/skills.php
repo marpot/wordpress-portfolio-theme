@@ -1,7 +1,9 @@
 <section class="skills panel" id="skills">
     <div class="container">
 
-        <h2>Umiejętności</h2>
+        <h2>
+            <?php echo pll__('Umiejętności'); ?>
+        </h2>
 
         <ul class="skills__grid">
 

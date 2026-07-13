@@ -7,12 +7,12 @@
 
 
             <span class="experience__label">
-                Doświadczenie zawodowe
+                <?php echo pll__('Doświadczenie zawodowe'); ?>
             </span>
 
 
             <h2 class="experience__title">
-                Moja ścieżka zawodowa
+                <?php echo pll__('Moja ścieżka zawodowa'); ?>
             </h2>
 
 
@@ -28,8 +28,8 @@
             $experience_query = new WP_Query([
                 'post_type'      => 'experience',
                 'posts_per_page' => -1,
-                'orderby'        => 'date',
-                'order'          => 'DESC',
+                'orderby'        => 'menu_order',
+                'order'          => 'ASC',
             ]);
 
 

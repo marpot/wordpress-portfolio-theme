@@ -68,3 +68,69 @@ add_action(
     },
     100
 );
+
+
+// Polylang translations
+
+// Polylang translations
+
+function dev_portfolio_register_translations() {
+
+    if (function_exists('pll_register_string')) {
+
+
+        // Experience
+
+        pll_register_string(
+            'experience_label',
+            'Doświadczenie zawodowe',
+            'Dev Portfolio'
+        );
+
+
+        pll_register_string(
+            'experience_title',
+            'Moja ścieżka zawodowa',
+            'Dev Portfolio'
+        );
+
+
+
+        // Skills
+
+        pll_register_string(
+            'skills_label',
+            'Umiejętności',
+            'Dev Portfolio'
+        );
+
+
+
+        // Projects
+
+        pll_register_string(
+            'projects_label',
+            'Projekty',
+            'Dev Portfolio'
+        );
+
+
+
+        // Contact
+
+        pll_register_string(
+            'contact_label',
+            'Kontakt',
+            'Dev Portfolio'
+        );
+
+
+    }
+
+}
+
+
+add_action(
+    'init',
+    'dev_portfolio_register_translations'
+);
