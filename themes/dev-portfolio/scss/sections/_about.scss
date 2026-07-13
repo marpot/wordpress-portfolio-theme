@@ -1,0 +1,241 @@
+.about {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 80px 0;
+
+    overflow: visible;
+
+
+
+    &::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 450px;
+
+        height: 450px;
+
+        top: 30%;
+
+        left: -180px;
+
+
+        background: radial-gradient(
+            circle,
+            rgba(0,255,204,0.12),
+            transparent 70%
+        );
+
+
+        filter: blur(70px);
+
+
+        animation: aboutGlow 10s ease-in-out infinite;
+
+    }
+
+
+
+    .container {
+
+        width:100%;
+
+    }
+
+
+
+    &__grid {
+
+        display:grid;
+
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+
+        gap:4rem;
+
+        align-items:start;
+
+    }
+
+
+
+    /*
+    LEFT - EXPERIENCE
+    */
+
+    &__experience {
+
+        padding-top:.5rem;
+
+    }
+
+
+
+    /*
+    RIGHT - ABOUT
+    */
+
+    &__content {
+
+        max-width:520px;
+
+        padding:0;
+
+        margin-top:0;
+
+    }
+
+
+
+    &__label {
+
+        display:inline-block;
+
+
+        margin-bottom:1.2rem;
+
+
+        font-size:.75rem;
+
+
+        letter-spacing:.25em;
+
+
+        text-transform:uppercase;
+
+
+        color:rgba(0,255,204,.8);
+
+    }
+
+
+
+    &__title {
+
+
+        margin-bottom:1.2rem;
+
+
+        font-size:clamp(1.8rem,4vw,2.8rem);
+
+
+        line-height:1.2;
+
+
+        font-weight:700;
+
+
+        letter-spacing:-.03em;
+
+
+
+        background:linear-gradient(
+            90deg,
+            #ffffff,
+            #00ffcc
+        );
+
+
+        -webkit-background-clip:text;
+
+        -webkit-text-fill-color:transparent;
+
+    }
+
+
+
+    &__description {
+
+
+        font-size:1rem;
+
+
+        line-height:1.7;
+
+
+        color:rgba(255,255,255,.72);
+
+
+        max-width:60ch;
+
+    }
+
+
+
+    &__skills {
+
+
+        display:flex;
+
+
+        flex-wrap:wrap;
+
+
+        gap:.6rem;
+
+
+        margin-top:2rem;
+
+
+
+        span {
+
+
+            padding:.45rem .9rem;
+
+
+            border-radius:999px;
+
+
+            font-size:.8rem;
+
+
+            background:rgba(255,255,255,.04);
+
+
+            border:1px solid rgba(255,255,255,.1);
+
+
+            color:rgba(255,255,255,.8);
+
+        }
+
+    }
+
+}
+
+
+
+@media(max-width:900px) {
+
+
+    .about {
+
+
+        padding:60px 0;
+
+
+        min-height:auto;
+
+
+
+        &__grid {
+
+            grid-template-columns:1fr;
+
+            gap:3rem;
+
+        }
+
+
+    }
+
+}
