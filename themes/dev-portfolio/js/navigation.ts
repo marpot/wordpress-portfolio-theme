@@ -1,6 +1,6 @@
 console.log("navigation.ts loaded");
 
-const links = document.querySelectorAll<HTMLAnchorElement>(".hero-nav__link");
+const links = document.querySelectorAll<HTMLAnchorElement>(".hero-nav__list a");
 const sections = document.querySelectorAll<HTMLElement>("section[id]");
 const container = document.querySelector(".snap-container");
 
@@ -26,10 +26,11 @@ const observer = new IntersectionObserver(
 
       const link = linkMap.get(id);
 
-      if (!link) return;
+      if (link) {
+        links.forEach((l) => l.classList.remove("active"));
 
-      links.forEach((l) => l.classList.remove("active"));
-      link.classList.add("active");
+        link.classList.add("active");
+      }
 
       history.replaceState(null, "", `#${id}`);
     });
