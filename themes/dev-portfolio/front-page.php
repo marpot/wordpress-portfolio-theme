@@ -8,6 +8,8 @@
 
     <?php get_template_part('template-parts/sections/about'); ?>
 
+    <?php get_template_part('template-parts/sections/experience'); ?>
+
     <?php get_template_part('template-parts/sections/skills'); ?>
 
     <?php get_template_part('template-parts/sections/projects'); ?>

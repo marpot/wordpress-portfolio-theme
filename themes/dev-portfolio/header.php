@@ -12,32 +12,61 @@
 
 <?php wp_body_open(); ?>
 
+
 <header class="site-header">
+
   <div class="container">
+
 
     <nav class="hero-nav">
 
-      <a class="hero-nav__link" href="#home">
-        Start
-      </a>
 
-      <a class="hero-nav__link" href="#about">
-        O mnie
-      </a>
+      <?php
 
-      <a class="hero-nav__link" href="#skills">
-        Umiejętności
-      </a>
+      wp_nav_menu([
 
-      <a class="hero-nav__link" href="#projects">
-        Projekty
-      </a>
+        'theme_location' => 'primary',
 
-      <a class="hero-nav__link" href="#contact">
-        Kontakt
-      </a>
+        'container' => false,
+
+        'menu_class' => '',
+
+        'fallback_cb' => false,
+
+      ]);
+
+      ?>
+
+
+
+      <?php if (function_exists('pll_the_languages')) : ?>
+
+
+        <div class="language-switcher">
+
+
+          <?php
+
+          pll_the_languages([
+
+            'show_names' => 1,
+
+            'show_flags' => 0,
+
+          ]);
+
+          ?>
+
+
+        </div>
+
+
+      <?php endif; ?>
+
 
     </nav>
 
+
   </div>
+
 </header>

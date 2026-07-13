@@ -1,6 +1,35 @@
 <?php
 
 
+// Theme setup
+
+function dev_portfolio_setup() {
+
+
+    add_theme_support('title-tag');
+
+
+    add_theme_support('post-thumbnails');
+
+
+    register_nav_menus([
+
+        'primary' => 'Primary Menu',
+
+    ]);
+
+
+}
+
+
+add_action(
+    'after_setup_theme',
+    'dev_portfolio_setup'
+);
+
+
+
+
 // Disable Gutenberg
 
 add_filter(
@@ -22,6 +51,7 @@ add_action('init', function () {
     );
 
 });
+
 
 
 
