@@ -59,13 +59,62 @@
 
     &__category {
 
+        position:relative;
+
         padding:2rem;
 
         border:1px solid rgba(255,255,255,.1);
 
-        background:rgba(255,255,255,.03);
+        background:rgba(255,255,255,.035);
 
-        border-radius:16px;
+        border-radius:24px;
+
+        backdrop-filter:blur(15px);
+
+        overflow:hidden;
+
+        transition:.3s ease;
+
+
+
+        &:hover {
+
+            transform:translateY(-6px);
+
+            border-color:
+            rgba(0,255,204,.35);
+
+
+
+            box-shadow:
+            0 20px 50px rgba(0,255,204,.08);
+
+        }
+
+
+
+        &::before {
+
+            content:"";
+
+            position:absolute;
+
+            top:0;
+
+            left:0;
+
+            width:100%;
+
+            height:2px;
+
+
+            background:linear-gradient(
+                90deg,
+                #00ffcc,
+                transparent
+            );
+
+        }
 
     }
 
@@ -113,6 +162,40 @@
         font-family:monospace;
 
         font-size:.85rem;
+
+        background:rgba(255,255,255,.02);
+
+        transition:
+            color .25s ease,
+            border-color .25s ease,
+            background .25s ease,
+            transform .25s ease,
+            box-shadow .25s ease;
+
+
+
+        &:hover {
+
+            transform:translateY(-3px);
+
+
+            color:#00ffcc;
+
+
+            border-color:
+            rgba(0,255,204,.45);
+
+
+
+            background:
+            rgba(0,255,204,.08);
+
+
+
+            box-shadow:
+            0 8px 20px rgba(0,255,204,.12);
+
+        }
 
     }
 
