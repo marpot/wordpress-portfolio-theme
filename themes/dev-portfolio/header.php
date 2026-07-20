@@ -6,6 +6,16 @@
   <title><?php bloginfo('name'); ?></title>
 
   <?php wp_head(); ?>
+
+    <style>
+    html {
+        visibility: hidden;
+    }
+
+    html.app-ready {
+        visibility: visible;
+    }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
