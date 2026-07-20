@@ -104,6 +104,12 @@ function dev_portfolio_register_translations() {
             'Dev Portfolio'
         );
 
+        pll_register_string(
+            'skills_title',
+            'Technologie, z których korzystam',
+            'Dev Portfolio'
+        );
+
 
 
         // Projects
@@ -123,8 +129,7 @@ function dev_portfolio_register_translations() {
             'Kontakt',
             'Dev Portfolio'
         );
-
-
+        
     }
 
 }

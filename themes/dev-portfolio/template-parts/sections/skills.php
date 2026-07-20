@@ -11,49 +11,101 @@
 
 
             <h2 class="skills__title">
-                Technologie, z których korzystam
+                <?php echo pll__('Technologie, z których korzystam'); ?>
             </h2>
 
         </div>
 
 
 
-        <ul class="skills__grid">
-
-            <?php
-
-            $skills = get_field('skills_list');
-
-
-            if ($skills):
-
-                $skills = explode("\n", $skills);
-
-
-                foreach ($skills as $skill):
-
-                    if (trim($skill)):
-
-            ?>
-
-                <li class="skills__item">
-
-                    <?php echo esc_html(trim($skill)); ?>
-
-                </li>
+        <div class="skills__categories">
 
 
             <?php
 
-                    endif;
+            $categories = [
 
-                endforeach;
+                'Backend' => 'skills_backend',
 
-            endif;
+                'Frontend' => 'skills_frontend',
+
+                'DevOps & Tools' => 'skills_tools',
+
+                'AI & NLP' => 'skills_ai',
+
+            ];
+
+
+
+            foreach ($categories as $title => $field):
+
+                $skills = get_field($field);
+
+
+                if ($skills):
 
             ?>
 
-        </ul>
+
+                <div class="skills__category">
+
+
+                    <h3 class="skills__category-title">
+
+                        <?php echo esc_html($title); ?>
+
+                    </h3>
+
+
+
+                    <ul class="skills__items">
+
+
+                        <?php
+
+                        $items = explode("\n", $skills);
+
+
+                        foreach ($items as $item):
+
+                            if (trim($item)):
+
+                        ?>
+
+
+                            <li class="skills__item">
+
+                                <?php echo esc_html(trim($item)); ?>
+
+                            </li>
+
+
+                        <?php
+
+                            endif;
+
+                        endforeach;
+
+                        ?>
+
+
+                    </ul>
+
+
+                </div>
+
+
+            <?php
+
+                endif;
+
+
+            endforeach;
+
+            ?>
+
+
+        </div>
 
 
     </div>
