@@ -223,7 +223,11 @@ function dev_portfolio_register_translations() {
         /*
         CONTACT
         */
-
+        pll_register_string(
+            'contact_heading',
+            'Skontaktujmy się',
+            'Dev Portfolio'
+        );
 
         pll_register_string(
             'contact_label',
@@ -231,7 +235,18 @@ function dev_portfolio_register_translations() {
             'Dev Portfolio'
         );
 
+        pll_register_string(
+            'contact_title',
+            'Porozmawiajmy o współpracy',
+            'Dev Portfolio'
+        );
 
+
+        pll_register_string(
+            'contact_description',
+            'Masz pomysł na projekt lub chcesz porozmawiać o współpracy? Skontaktuj się ze mną.',
+            'Dev Portfolio'
+        );
 
     }
 

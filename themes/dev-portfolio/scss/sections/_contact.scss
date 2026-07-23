@@ -1,0 +1,314 @@
+.contact {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+
+    &::before {
+
+        content:"";
+
+        position:absolute;
+
+
+        width:500px;
+
+        height:500px;
+
+
+        left:-200px;
+
+        bottom:10%;
+
+
+        background:
+        radial-gradient(
+            circle,
+            rgba(0,255,204,.12),
+            transparent 70%
+        );
+
+
+        filter:blur(80px);
+
+    }
+
+
+
+
+
+    &__header {
+
+        text-align:center;
+
+        max-width:800px;
+
+        margin:0 auto 4rem;
+
+    }
+
+
+
+
+
+    &__label {
+
+        display:inline-block;
+
+
+        margin-bottom:1rem;
+
+
+        font-size:.75rem;
+
+
+        letter-spacing:.3em;
+
+
+        text-transform:uppercase;
+
+
+        font-family:monospace;
+
+
+        color:
+        rgba(0,255,204,.8);
+
+    }
+
+
+
+
+
+    &__title {
+
+        margin:0 0 1.5rem;
+
+
+        font-size:
+        clamp(2rem,5vw,3.5rem);
+
+
+        font-weight:700;
+
+
+        letter-spacing:-.03em;
+
+
+        background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #00ffcc
+        );
+
+
+        -webkit-background-clip:text;
+
+        -webkit-text-fill-color:transparent;
+
+    }
+
+
+
+
+
+    &__description {
+
+        color:
+        rgba(255,255,255,.7);
+
+
+        line-height:1.8;
+
+        font-size:1.1rem;
+
+    }
+
+
+
+
+
+    &__cards {
+
+        display:grid;
+
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+
+        gap:2rem;
+
+
+        max-width:900px;
+
+        margin:0 auto;
+
+    }
+
+
+
+}
+
+
+
+
+
+.contact-card {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:.8rem;
+
+
+    padding:2rem;
+
+
+
+    text-decoration:none;
+
+
+    background:
+    rgba(255,255,255,.035);
+
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+
+
+    border-radius:24px;
+
+
+    backdrop-filter:blur(15px);
+
+
+
+    transition:.3s ease;
+
+
+
+
+    &__label {
+
+        font-size:.75rem;
+
+
+        text-transform:uppercase;
+
+
+        letter-spacing:.2em;
+
+
+        font-family:monospace;
+
+
+        color:#00ffcc;
+
+    }
+
+
+
+
+
+    &__value {
+
+        color:
+        rgba(255,255,255,.8);
+
+
+        font-size:1rem;
+
+    }
+
+
+
+
+
+    &:hover {
+
+        transform:
+        translateY(-8px);
+
+
+        border-color:
+        rgba(0,255,204,.45);
+
+
+        background:
+        rgba(0,255,204,.08);
+
+
+
+        .contact-card__value {
+
+            color:#fff;
+
+        }
+
+    }
+
+}
+
+.contact-card {
+
+    &__icon {
+
+        width:40px;
+        height:40px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        margin-bottom:.8rem;
+
+        color:#00ffcc;
+
+
+        svg {
+
+            width:28px;
+            height:28px;
+
+            fill:currentColor;
+
+        }
+
+    }
+
+}
+
+
+
+@media(max-width:700px) {
+
+
+    .contact {
+
+
+        &__cards {
+
+            grid-template-columns:1fr;
+
+        }
+
+    }
+
+}
