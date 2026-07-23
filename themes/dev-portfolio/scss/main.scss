@@ -2,7 +2,17 @@
 @use "./utils/breakpoints" as *;
 @use "./utils/typography" as *;
 
+
+/*
+BASE
+*/
+
 @use "./base/reset";
+
+
+/*
+LAYOUT
+*/
 
 @use "./layout/container";
 @use "./layout/grid";
@@ -12,31 +22,69 @@
 @use "./layout/background";
 @use "./layout/header";
 
+
+/*
+COMPONENTS
+*/
+
 @use "./components/buttons";
 @use "./components/cards";
 @use "./components/navigation";
+@use "./components/language-switcher";
+@use "./components/project-single";
+
+
+/*
+SECTIONS
+*/
 
 @use "./sections/hero";
 
+@use "./sections/about";
+@use "./sections/experience";
+@use "./sections/profile";
+
+@use "./sections/skills";
+@use "./sections/projects";
+@use "./sections/contact";
+
+
+
+/*
+GLOBAL
+*/
+
 body {
-  font-family: system-ui, sans-serif;
 
-  background:
-    radial-gradient(
-      circle at top,
-      rgba(0,255,204,0.08),
-      transparent 35%
-    ),
-    #050505;
+    font-family: system-ui, sans-serif;
 
-  color: #fff;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0,255,204,0.08),
+            transparent 35%
+        ),
+        #050505;
 
-  line-height: 1.5;
+
+    color:#fff;
+
+    line-height:1.5;
+
 }
+
+
+
 html {
-  scroll-behavior: smooth;
+
+    scroll-behavior:smooth;
+
 }
+
+
 
 section {
-  scroll-margin-top: 80px; 
+
+    scroll-margin-top:80px;
+
 }

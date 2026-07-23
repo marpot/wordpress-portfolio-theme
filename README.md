@@ -1,27 +1,26 @@
+README jest już dobre, ale teraz po zakończeniu projektu trzeba je zaktualizować, bo część rzeczy jest nadal w sekcji **Future improvements**, a one już istnieją (CPT, Experience, portfolio sections, Polylang itd.).
+
+Proponuję taką wersję:
+
+```md
 # 🚀 Dev Portfolio — Custom WordPress Theme
 
 ![WordPress](https://img.shields.io/badge/WordPress-Custom%20Theme-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-Architecture-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Development-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Build%20Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Environment-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
 
-## 🧑‍💻 About the project
+# 🧑‍💻 About the project
 
-A custom WordPress portfolio theme built from scratch.
+A custom WordPress portfolio theme developed from scratch.
 
-The project focuses on creating a modern developer portfolio with:
+The project presents a modern developer portfolio website built with a custom WordPress architecture, modern frontend tooling and CMS-based content management.
 
-- custom WordPress theme architecture
-- clean SCSS structure
-- TypeScript-powered interactions
-- responsive design
-- editable content through WordPress CMS
-- Docker-based local development environment
-
-The goal was to combine modern frontend development practices with WordPress theme development.
+The main goal was to create a professional portfolio platform where all content can be managed directly from WordPress administration.
 
 ---
 
@@ -29,27 +28,43 @@ The goal was to combine modern frontend development practices with WordPress the
 
 ## 🎨 Frontend
 
-- ⚡ Modern responsive layout
+- ⚡ Modern responsive full-page portfolio layout
 - 🌌 Animated background effects
-- 🧩 Component-based SCSS architecture
+- 🧩 Modular SCSS architecture
 - 🎯 Smooth section navigation
-- 🔥 Active menu highlighting using Intersection Observer
-- 📱 Mobile-friendly design
+- 🔥 Active navigation highlighting using Intersection Observer
+- 📱 Responsive mobile design
+- 🎨 Custom project detail pages
+
+---
 
 ## 📝 WordPress CMS
 
-- Custom theme development
-- Editable portfolio sections
-- Dynamic content management
-- WordPress template structure
-- Custom PHP components
+- Custom WordPress theme created from scratch
+- Custom Post Types:
+  - Projects
+  - Experience
+- Advanced Custom Fields (ACF) integration
+- Dynamic portfolio sections
+- Editable project information:
+  - description
+  - technologies
+  - GitHub links
+  - Docker information
+- Experience timeline management
+- Template parts architecture
+- Polylang multilingual support
 
-## 🛠 Developer Experience
+---
 
-- 🐳 Docker development environment
-- 📦 npm-based asset pipeline
-- 🎨 SCSS compilation
-- 🔍 Clean project organization
+# 🛠 Developer Experience
+
+- 🐳 Docker Compose local environment
+- 📦 npm asset pipeline
+- ⚡ Vite frontend bundling
+- 🎨 SCSS preprocessing
+- 🧱 Clean theme structure
+- 🔧 Separation of PHP logic into modules
 
 ---
 
@@ -61,6 +76,10 @@ The goal was to combine modern frontend development practices with WordPress the
 |-|-|
 | 🟦 WordPress | CMS |
 | 🐘 PHP | Theme development |
+| 🔌 ACF | Custom fields |
+| 🌍 Polylang | Multilingual support |
+
+---
 
 ## Frontend
 
@@ -71,44 +90,57 @@ The goal was to combine modern frontend development practices with WordPress the
 | TypeScript | Interactive features |
 | Vite | Asset bundling |
 
+---
+
 ## Environment
 
 | Technology | Purpose |
 |-|-|
-| Docker | Local development |
-| Docker Compose | Service orchestration |
+| Docker | Development environment |
+| Docker Compose | Container orchestration |
+| MySQL | Database |
 
 ---
 
 # 📂 Project Structure
 
 ```
+
 wp-projects/
 
 ├── docker-compose.yml
 ├── Makefile
 │
 └── themes/
-    │
-    └── dev-portfolio/
-        │
-        ├── functions.php
-        ├── header.php
-        ├── footer.php
-        ├── index.php
-        │
-        ├── js/
-        │   └── TypeScript files
-        │
-        ├── scss/
-        │   ├── base/
-        │   ├── components/
-        │   ├── layout/
-        │   ├── sections/
-        │   └── utils/
-        │
-        └── style.css
-```
+│
+└── dev-portfolio/
+│
+├── functions.php
+├── single-project.php
+├── header.php
+├── footer.php
+│
+├── inc/
+│   ├── setup.php
+│   ├── custom-post-types.php
+│   ├── assets.php
+│   └── helpers.php
+│
+├── template-parts/
+│   ├── sections/
+│   └── projects/
+│
+├── js/
+│   └── TypeScript files
+│
+└── scss/
+├── base/
+├── components/
+├── layout/
+├── sections/
+└── utils/
+
+````
 
 ---
 
@@ -118,31 +150,36 @@ wp-projects/
 
 - Docker
 - Docker Compose
-- Node.js + npm
+- Node.js
+- npm
 
 ---
 
-## Start project
-
-Clone repository:
+## Clone repository
 
 ```bash
 git clone https://github.com/marpot/wordpress-portfolio-theme.git
-```
+````
 
-Run containers:
+---
+
+## Start WordPress environment
 
 ```bash
 docker compose up
 ```
 
-Install frontend dependencies:
+---
+
+## Install frontend dependencies
 
 ```bash
 npm install
 ```
 
-Start development mode:
+---
+
+## Start Vite development server
 
 ```bash
 npm run dev
@@ -150,16 +187,15 @@ npm run dev
 
 ---
 
-# 🎯 Development goals
+# 🔮 Future improvements
 
-Future improvements:
+Possible future extensions:
 
-- [ ] Editable portfolio sections from WordPress admin
-- [ ] Custom post types for projects
-- [ ] Experience timeline section
-- [ ] Contact form integration
-- [ ] Deployment configuration
-- [ ] Performance optimization
+* [ ] Contact form integration
+* [ ] Deployment configuration
+* [ ] Performance optimization
+* [ ] SEO improvements
+* [ ] Additional portfolio animations
 
 ---
 
@@ -175,16 +211,18 @@ Coming soon.
 
 Software Developer interested in:
 
-- Python / Django
-- React
-- WordPress Development
-- AI integrations
-- Game development
+* Python / Django
+* React
+* WordPress Development
+* AI integrations
+* Game development
 
 GitHub:
 
-https://github.com/marpot
+[https://github.com/marpot](https://github.com/marpot)
 
 ---
 
 ⭐ If you like this project, feel free to give it a star.
+
+````

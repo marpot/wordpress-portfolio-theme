@@ -5,21 +5,19 @@
     <div class="container hero__content">
 
         <p class="hero__tag">
-            SOFTWARE DEVELOPER
+            <?php echo esc_html(get_field('hero_tag')); ?>
         </p>
 
         <h1 class="hero__title">
-            Marcin Potoczny
+            <?php echo esc_html(get_field('hero_title')); ?>
         </h1>
 
         <h2 class="hero__subtitle">
-            WordPress • Python • Django • React
+            <?php echo esc_html(get_field('hero_subtitle')); ?>
         </h2>
 
         <p class="hero__description">
-            Tworzę nowoczesne aplikacje webowe,
-            automatyzuję procesy i buduję rozwiązania
-            z wykorzystaniem sztucznej inteligencji.
+            <?php echo esc_html(esc_html(get_field('hero_description'))); ?>
         </p>
 
         <div class="hero__status">
@@ -28,7 +26,7 @@
 
             <span>
                 Current project:
-                AI Multiplayer RPG Engine
+                <?php echo esc_html(get_field('project_status')); ?>
             </span>
 
         </div>

@@ -26,6 +26,16 @@ services:
       - wp_data:/var/www/html
       - ./themes/:/var/www/html/wp-content/themes/
 
+  vite:
+    image: node:22
+    container_name: wp_vite
+    working_dir: /app
+    volumes:
+      - ./themes/dev-portfolio:/app
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host 0.0.0.0
+
 volumes:
   db_data:
   wp_data:

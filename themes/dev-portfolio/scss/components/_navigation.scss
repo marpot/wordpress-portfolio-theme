@@ -1,11 +1,51 @@
 .hero-nav {
+
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
   gap: 32px;
+
 }
 
 
-.hero-nav__link {
+
+.hero-nav__menu {
+
+  flex: 1;
+
+}
+
+
+
+.hero-nav__list {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 32px;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+.hero-nav__list li {
+
+  margin: 0;
+
+}
+
+
+
+.hero-nav__list a {
+
   position: relative;
 
   color: rgba(255, 255, 255, 0.7);
@@ -13,7 +53,9 @@
   text-decoration: none;
 
   font-family: monospace;
+
   font-size: 0.95rem;
+
   font-weight: 500;
 
   letter-spacing: 0.05em;
@@ -24,68 +66,124 @@
     color 0.25s ease,
     text-shadow 0.25s ease;
 
-
-  &::before {
-    content: "> ";
-
-    color: #00ffcc;
-
-    opacity: 0;
-
-    transition: opacity 0.25s ease;
-  }
-
-
-  &:hover {
-    color: #ffffff;
-
-    text-shadow:
-      0 0 8px rgba(0, 255, 204, 0.7);
-
-
-    &::before {
-      opacity: 1;
-    }
-  }
-
-
-  &.active {
-    color: #00ffcc;
-
-    text-shadow:
-      0 0 10px rgba(0, 255, 204, 0.8);
-
-
-    &::after {
-      content: "";
-
-      position: absolute;
-
-      left: 0;
-      bottom: -8px;
-
-      width: 100%;
-      height: 2px;
-
-      background: #00ffcc;
-
-      box-shadow:
-        0 0 10px #00ffcc;
-
-      animation: underlineIn 0.25s ease forwards;
-    }
-  }
 }
 
 
+
+.hero-nav__list a::before {
+
+  content: "> ";
+
+  color: #00ffcc;
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+
+}
+
+
+
+.hero-nav__list a:hover {
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 8px rgba(0, 255, 204, 0.7);
+
+}
+
+
+
+.hero-nav__list a:hover::before {
+
+  opacity: 1;
+
+}
+
+
+
+.hero-nav__list a.active {
+
+  color: #00ffcc;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 204, 0.8);
+
+}
+
+
+
+.hero-nav__list a.active::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 100%;
+
+  height: 2px;
+
+  background: #00ffcc;
+
+  box-shadow:
+    0 0 10px #00ffcc;
+
+  animation: underlineIn 0.25s ease forwards;
+
+}
+
+
+
+.language-switcher {
+
+  flex-shrink: 0;
+
+}
+
+
+
+.language-switcher a {
+
+  color: rgba(255,255,255,0.7);
+
+  text-decoration: none;
+
+  font-family: monospace;
+
+}
+
+
+
+.language-switcher a:hover {
+
+  color: #00ffcc;
+
+}
+
+
+
 @keyframes underlineIn {
+
   from {
+
     transform: scaleX(0);
+
     transform-origin: left;
+
   }
 
+
   to {
+
     transform: scaleX(1);
+
     transform-origin: left;
+
   }
+
 }

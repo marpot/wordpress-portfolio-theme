@@ -6,38 +6,83 @@
   <title><?php bloginfo('name'); ?></title>
 
   <?php wp_head(); ?>
+
+    <style>
+    html {
+        visibility: hidden;
+    }
+
+    html.app-ready {
+        visibility: visible;
+    }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
 
 <?php wp_body_open(); ?>
 
+
 <header class="site-header">
+
   <div class="container">
+
 
     <nav class="hero-nav">
 
-      <a class="hero-nav__link" href="#home">
-        Start
-      </a>
 
-      <a class="hero-nav__link" href="#about">
-        O mnie
-      </a>
+      <div class="hero-nav__menu">
 
-      <a class="hero-nav__link" href="#skills">
-        Umiejętności
-      </a>
 
-      <a class="hero-nav__link" href="#projects">
-        Projekty
-      </a>
+        <?php
 
-      <a class="hero-nav__link" href="#contact">
-        Kontakt
-      </a>
+        wp_nav_menu([
+
+          'theme_location' => 'primary',
+
+          'container' => false,
+
+          'menu_class' => 'hero-nav__list',
+
+          'fallback_cb' => false,
+
+        ]);
+
+        ?>
+
+
+      </div>
+
+
+
+      <?php if (function_exists('pll_the_languages')) : ?>
+
+
+        <div class="language-switcher">
+
+
+          <?php
+
+          pll_the_languages([
+
+            'show_names' => 1,
+
+            'show_flags' => 0,
+
+          ]);
+
+          ?>
+
+
+        </div>
+
+
+      <?php endif; ?>
+
 
     </nav>
 
+
   </div>
+
 </header>

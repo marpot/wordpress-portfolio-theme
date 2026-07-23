@@ -1,0 +1,632 @@
+.project-single {
+
+    min-height:100vh;
+
+    padding:120px 0 80px;
+
+
+    position:relative;
+
+
+
+    &::before {
+
+        content:"";
+
+        position:absolute;
+
+        width:500px;
+
+        height:500px;
+
+        right:-200px;
+
+        top:20%;
+
+
+        background:
+        radial-gradient(
+            circle,
+            rgba(0,255,204,.12),
+            transparent 70%
+        );
+
+
+        filter:blur(80px);
+
+    }
+
+
+
+
+
+    &__back {
+
+        display:inline-flex;
+
+        align-items:center;
+
+        gap:.6rem;
+
+
+        margin-bottom:2.5rem;
+
+
+        padding:.55rem 1.2rem;
+
+
+        border-radius:999px;
+
+
+        font-size:.85rem;
+
+
+        font-family:monospace;
+
+
+        text-decoration:none;
+
+
+
+        color:
+        rgba(255,255,255,.75);
+
+
+
+        background:
+        rgba(255,255,255,.035);
+
+
+
+        border:
+        1px solid rgba(255,255,255,.12);
+
+
+
+        backdrop-filter:blur(15px);
+
+
+
+        transition:.25s ease;
+
+
+
+        &:hover {
+
+            color:#00ffcc;
+
+
+            border-color:
+            rgba(0,255,204,.45);
+
+
+
+            background:
+            rgba(0,255,204,.08);
+
+
+
+            transform:
+            translateX(-4px);
+
+        }
+
+    }
+
+
+
+
+
+    &__header {
+
+        text-align:center;
+
+        margin-bottom:3rem;
+
+    }
+
+
+
+
+
+    &__label {
+
+        display:inline-block;
+
+
+        margin-bottom:1rem;
+
+
+        font-size:.75rem;
+
+
+        letter-spacing:.3em;
+
+
+        text-transform:uppercase;
+
+
+        color:
+        rgba(0,255,204,.8);
+
+
+        font-family:monospace;
+
+    }
+
+
+
+
+
+    &__title {
+
+        margin:0;
+
+
+        font-size:
+        clamp(2rem,5vw,3.5rem);
+
+
+        font-weight:700;
+
+
+        letter-spacing:-.03em;
+
+
+
+        background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #00ffcc
+        );
+
+
+
+        -webkit-background-clip:text;
+
+
+        -webkit-text-fill-color:transparent;
+
+    }
+
+
+
+
+
+    &__image {
+
+        width:100%;
+
+
+        max-width:1000px;
+
+
+        height:450px;
+
+
+        margin:0 auto 3rem;
+
+
+
+        overflow:hidden;
+
+
+        border-radius:24px;
+
+
+
+        border:
+        1px solid rgba(255,255,255,.1);
+
+
+
+        box-shadow:
+        0 30px 80px rgba(0,255,204,.12);
+
+
+
+        img {
+
+            width:100%;
+
+
+            height:100%;
+
+
+            object-fit:cover;
+
+
+
+            transition:
+            transform .5s ease;
+
+        }
+
+
+
+        &:hover img {
+
+            transform:
+            scale(1.05);
+
+        }
+
+    }
+
+
+
+
+
+    &__content {
+
+        position:relative;
+
+
+        overflow:hidden;
+
+
+        max-width:900px;
+
+
+        margin:0 auto;
+
+
+
+        padding:2.5rem;
+
+
+
+        background:
+        rgba(255,255,255,.035);
+
+
+
+        border:
+        1px solid rgba(255,255,255,.1);
+
+
+
+        border-radius:24px;
+
+
+
+        backdrop-filter:blur(15px);
+
+
+
+        transition:.3s ease;
+
+
+
+        &::before {
+
+            content:"";
+
+
+            position:absolute;
+
+
+            top:0;
+
+
+            left:0;
+
+
+            width:100%;
+
+
+            height:2px;
+
+
+
+            background:
+            linear-gradient(
+                90deg,
+                #00ffcc,
+                transparent
+            );
+
+        }
+
+
+
+        &:hover {
+
+            border-color:
+            rgba(0,255,204,.35);
+
+
+
+            box-shadow:
+            0 20px 50px rgba(0,255,204,.08);
+
+        }
+
+    }
+
+
+
+
+
+    &__description {
+
+        margin-bottom:2rem;
+
+
+        font-size:1.1rem;
+
+
+        line-height:1.7;
+
+
+        color:
+        rgba(255,255,255,.8);
+
+    }
+
+
+
+
+
+    &__text {
+
+        margin-bottom:2.5rem;
+
+
+        color:
+        rgba(255,255,255,.7);
+
+
+
+        line-height:1.8;
+
+
+
+        p {
+
+            margin-bottom:1rem;
+
+        }
+
+    }
+
+
+
+
+
+    &__technologies {
+
+        margin-bottom:2rem;
+
+
+
+        h3 {
+
+            margin-bottom:1rem;
+
+
+            color:#fff;
+
+
+            font-size:1.1rem;
+
+        }
+
+    }
+
+
+
+
+
+    &__tags {
+
+        display:flex;
+
+
+        flex-wrap:wrap;
+
+
+        gap:.6rem;
+
+
+
+        span {
+
+            padding:.45rem .9rem;
+
+
+            border-radius:999px;
+
+
+
+            background:
+            rgba(255,255,255,.02);
+
+
+
+            border:
+            1px solid rgba(255,255,255,.12);
+
+
+
+            color:
+            rgba(255,255,255,.8);
+
+
+
+            font-size:.85rem;
+
+
+            font-family:monospace;
+
+
+
+            transition:.25s ease;
+
+
+
+            &:hover {
+
+                transform:
+                translateY(-3px);
+
+
+
+                color:#00ffcc;
+
+
+                border-color:
+                rgba(0,255,204,.45);
+
+
+
+                background:
+                rgba(0,255,204,.08);
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+    &__docker {
+
+        margin-bottom:2rem;
+
+
+        color:
+        rgba(255,255,255,.7);
+
+
+
+        strong {
+
+            color:#00ffcc;
+
+        }
+
+    }
+
+
+
+
+
+    &__actions {
+
+        display:flex;
+
+
+        gap:1rem;
+
+
+        flex-wrap:wrap;
+
+    }
+
+
+
+
+
+    &__github {
+
+        display:inline-flex;
+
+
+        align-items:center;
+
+
+        justify-content:center;
+
+
+
+        padding:.7rem 1.4rem;
+
+
+
+        border-radius:999px;
+
+
+        text-decoration:none;
+
+
+        font-size:.9rem;
+
+
+
+        color:#00ffcc;
+
+
+
+        border:
+        1px solid rgba(0,255,204,.4);
+
+
+
+        transition:.25s ease;
+
+
+
+        &:hover {
+
+            background:
+            rgba(0,255,204,.1);
+
+
+            transform:
+            translateY(-3px);
+
+        }
+
+    }
+
+}
+
+
+
+
+
+@media(max-width:700px) {
+
+
+    .project-single {
+
+
+        padding:100px 0 60px;
+
+
+
+
+        &__image {
+
+            height:250px;
+
+        }
+
+
+
+
+
+        &__content {
+
+            padding:1.5rem;
+
+        }
+
+
+
+
+
+        &__back {
+
+            margin-bottom:1.5rem;
+
+        }
+
+    }
+
+}

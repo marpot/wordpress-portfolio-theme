@@ -1,0 +1,112 @@
+.about {
+
+
+    &__content {
+
+        max-width:520px;
+
+        padding:2rem;
+
+        animation:aboutReveal 1s ease forwards;
+
+    }
+
+
+
+    &__avatar {
+
+        width:110px;
+
+        height:110px;
+
+        margin-bottom:2rem;
+
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+
+        border-radius:50%;
+
+
+        background:
+        radial-gradient(
+            circle,
+            rgba(0,255,204,.35),
+            rgba(0,255,204,.05)
+        );
+
+
+        border:1px solid rgba(0,255,204,.4);
+
+    }
+
+
+
+    &__avatar-icon {
+
+        font-size:2.5rem;
+
+        color:#00ffcc;
+
+    }
+
+
+
+    &__title {
+
+        font-size:clamp(1.8rem,4vw,2.8rem);
+
+        background:linear-gradient(
+            90deg,
+            white,
+            #00ffcc
+        );
+
+        -webkit-background-clip:text;
+
+        -webkit-text-fill-color:transparent;
+
+    }
+
+
+
+    &__description {
+
+        line-height:1.8;
+
+        color:rgba(255,255,255,.72);
+
+    }
+
+
+
+    &__stack {
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        gap:.75rem;
+
+        margin-top:2rem;
+
+
+        span {
+
+            padding:.5rem 1rem;
+
+            border-radius:999px;
+
+            background:rgba(255,255,255,.04);
+
+            border:1px solid rgba(255,255,255,.15);
+
+        }
+
+    }
+
+}
