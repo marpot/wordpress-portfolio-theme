@@ -25,10 +25,19 @@ links.forEach((link) => {
   const href = link.getAttribute("href");
 
 
-  if (href?.startsWith("#")) {
+  if (!href) return;
+
+
+  const hash = new URL(
+    href,
+    window.location.origin
+  ).hash;
+
+
+  if (hash) {
 
     linkMap.set(
-      href.replace("#", ""),
+      hash.replace("#", ""),
       link
     );
 
