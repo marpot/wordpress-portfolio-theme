@@ -38,4 +38,6 @@ services:
 
 volumes:
   db_data:
+    name: wp-projects_db_data
   wp_data:
+    name: wp-projects_wp_data
