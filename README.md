@@ -1,6 +1,3 @@
-README jest już dobre, ale teraz po zakończeniu projektu trzeba je zaktualizować, bo część rzeczy jest nadal w sekcji **Future improvements**, a one już istnieją (CPT, Experience, portfolio sections, Polylang itd.).
-
-Proponuję taką wersję:
 
 ```md
 # 🚀 Dev Portfolio — Custom WordPress Theme
