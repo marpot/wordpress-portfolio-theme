@@ -10,7 +10,6 @@
 
                 <div class="about__header">
 
-                    
 
                     <h2 class="about__title">
                         <?php echo esc_html(get_field('about_title')); ?>
