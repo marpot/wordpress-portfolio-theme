@@ -8,9 +8,19 @@
             <div class="about__content">
 
 
-                <h2 class="about__title">
-                    <?php echo esc_html(get_field('about_title')); ?>
-                </h2>
+                <div class="about__header">
+
+                    <span class="about__label">
+                        <?php echo pll__('O mnie'); ?>
+                    </span>
+
+
+                    <h2 class="about__title">
+                        <?php echo esc_html(get_field('about_title')); ?>
+                    </h2>
+
+                </div>
+
 
 
                 <p class="about__description">
@@ -18,7 +28,9 @@
                 </p>
 
 
+
             </div>
+
 
 
 
@@ -33,6 +45,7 @@
 
 
             </div>
+
 
 
         </div>
