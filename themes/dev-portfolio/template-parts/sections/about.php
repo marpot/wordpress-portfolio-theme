@@ -10,10 +10,7 @@
 
                 <div class="about__header">
 
-                    <span class="about__label">
-                        <?php echo pll__('O mnie'); ?>
-                    </span>
-
+                    
 
                     <h2 class="about__title">
                         <?php echo esc_html(get_field('about_title')); ?>

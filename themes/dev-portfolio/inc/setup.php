@@ -95,7 +95,16 @@ function dev_portfolio_register_translations() {
 
 
     if (function_exists('pll_register_string')) {
+                /*
+        ABOUT
+        */
 
+
+        pll_register_string(
+            'about_title',
+            'O mnie',
+            'Dev Portfolio'
+        );
 
 
         /*
