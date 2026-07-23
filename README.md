@@ -1,4 +1,3 @@
-
 ```md
 # 🚀 Dev Portfolio — Custom WordPress Theme
 
@@ -33,6 +32,7 @@ The main goal was to create a professional portfolio platform where all content 
 - 📱 Responsive mobile design
 - 🎨 Custom project detail pages
 
+
 ---
 
 ## 📝 WordPress CMS
@@ -52,6 +52,7 @@ The main goal was to create a professional portfolio platform where all content 
 - Template parts architecture
 - Polylang multilingual support
 
+
 ---
 
 # 🛠 Developer Experience
@@ -62,6 +63,7 @@ The main goal was to create a professional portfolio platform where all content 
 - 🎨 SCSS preprocessing
 - 🧱 Clean theme structure
 - 🔧 Separation of PHP logic into modules
+
 
 ---
 
@@ -76,7 +78,6 @@ The main goal was to create a professional portfolio platform where all content 
 | 🔌 ACF | Custom fields |
 | 🌍 Polylang | Multilingual support |
 
----
 
 ## Frontend
 
@@ -87,7 +88,6 @@ The main goal was to create a professional portfolio platform where all content 
 | TypeScript | Interactive features |
 | Vite | Asset bundling |
 
----
 
 ## Environment
 
@@ -96,6 +96,7 @@ The main goal was to create a professional portfolio platform where all content 
 | Docker | Development environment |
 | Docker Compose | Container orchestration |
 | MySQL | Database |
+
 
 ---
 
@@ -107,6 +108,7 @@ wp-projects/
 
 ├── docker-compose.yml
 ├── Makefile
+├── README.md
 │
 └── themes/
 │
@@ -130,12 +132,20 @@ wp-projects/
 ├── js/
 │   └── TypeScript files
 │
-└── scss/
-├── base/
-├── components/
-├── layout/
-├── sections/
-└── utils/
+├── scss/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   ├── sections/
+│   └── utils/
+│
+└── screenshots/
+├── hero.png
+├── about.png
+├── experience.png
+├── skills.png
+├── projects.png
+└── contact.png
 
 ````
 
@@ -150,7 +160,6 @@ wp-projects/
 - Node.js
 - npm
 
----
 
 ## Clone repository
 
@@ -158,23 +167,17 @@ wp-projects/
 git clone https://github.com/marpot/wordpress-portfolio-theme.git
 ````
 
----
-
 ## Start WordPress environment
 
 ```bash
 docker compose up
 ```
 
----
-
 ## Install frontend dependencies
 
 ```bash
 npm install
 ```
-
----
 
 ## Start Vite development server
 
@@ -198,7 +201,29 @@ Possible future extensions:
 
 # 📸 Screenshots
 
-Coming soon.
+## Hero
+
+![Hero](themes/dev-portfolio/screenshots/Hero.png)
+
+## About Me
+
+![About Me](themes/dev-portfolio/screenshots/Aboutme.png)
+
+## Experience
+
+![Experience](themes/dev-portfolio/screenshots/Experience.png)
+
+## Skills
+
+![Skills](themes/dev-portfolio/screenshots/Skills.png)
+
+## Projects
+
+![Projects](themes/dev-portfolio/screenshots/Projects.png)
+
+## Contact
+
+![Contact](themes/dev-portfolio/screenshots/Contact.png)
 
 ---
 
