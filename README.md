@@ -1,14 +1,6 @@
 ```md
 # 🚀 Dev Portfolio — Custom WordPress Theme
 
-![WordPress](https://img.shields.io/badge/WordPress-Custom%20Theme-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-Architecture-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-Development-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-Build%20Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Environment-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
----
 
 # 🧑‍💻 About the project
 
